@@ -18,3 +18,13 @@ app.get("/health", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
+
+app.get("/api/v1/users", (req, res) => {
+    res.status(200).json({
+        status: "success",
+        data: {
+            users: []
+        }
+    });
+});
